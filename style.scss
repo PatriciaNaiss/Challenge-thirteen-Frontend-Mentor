@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+$violet: #674baf;
+$soft-magenda: #e882e8;
+$white: #ffffff;
+$font-weight-400: 400;
+$font-weight-600: 600;
+$font-poppins: 'Poppins', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+
+body {
+  background-color: $violet;
+  background-image: url(images/bg-mobile.svg);
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  header {
+    display: flex;
+    justify-content: flex-start;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 40px;
+    img {
+      height: 50px;
+    }
+  }
+  section {
+    margin-bottom: 40px;
+    text-align: center;
+    color: $white;
+    font-family: $soft-magenda;
+    img {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    article {
+      font-family: $font-open-sans;
+      h1 {
+        font-size: 40px;
+        font-family: $font-poppins;
+        font-weight: $font-weight-600;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: $font-weight-400;
+      }
+      button {
+        margin-top: 20px;
+        font-size: 18px;
+        background: $white;
+        color: $violet;
+        padding: 20px 125px;
+        border: none;
+        border-radius: 40px;
+        transition: 0.4s;
+        font-family: $font-poppins;
+        &:hover {
+          background: $soft-magenda;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      div {
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 100px;
+        a {
+          height: 40px;
+          width: 40px;
+          margin: 10px;
+          border: 1px solid $white;
+          border-radius: 50%;
+          img {
+            margin-top: 7px;
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 750px){
+  body {
+  background-image: url(images/bg-desktop.svg);
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+  main {
+    padding: 40px;
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 0;
+        text-align: left;
+        img {
+          width: 100%;
+          padding-right: 50px;
+        }
+        article {
+          h2 {
+            font-size: 16px;
+            line-height: 25px;
+          }
+          button {
+            padding: 15px 80px;
+          }
+          div {
+            justify-content: flex-end;
+
+          }
+        }
+      }
+    }}
